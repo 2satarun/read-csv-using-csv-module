@@ -1,0 +1,13 @@
+import csv
+import json
+
+filename = "ryzen_3000.csv"
+
+data = []
+
+with open(filename,encoding="utf-8") as f:
+    csv_reader = csv.reader(f,quotechar='"',delimiter=",")
+    for row in csv_reader:
+      
+      data.append(row[5])
+print(str(data).replace("'",'"'))
